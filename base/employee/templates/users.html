@@ -1,0 +1,44 @@
+<html>
+<head>
+   <title>Шаблон для вывода проектов</title>
+</head>
+<body>
+<h2>Здесь будут все пользователи</h2>
+<table border="2px">
+   <thead>
+   <tr>
+      <th>
+         Full name
+      </th>
+      <th>
+         Vacancy
+      </th>
+      <th>
+         Is fired
+      </th>
+      <th>
+         Firing date
+      </th>
+   </tr>
+   </thead>
+   {% for xyi in employee %}
+      <tbody>
+         <tr>
+            <td>
+               {{xyi.full_name}}
+            </td>
+            <td>
+               {{xyi.vacancy}}
+            </td>
+            <td>
+               {{xyi.is_fired}}
+            </td>
+            <td>
+                {{xyi.fire_date}}
+            </td>
+      </tbody>
+   {% endfor %}
+</table>
+
+</body>
+</html>
