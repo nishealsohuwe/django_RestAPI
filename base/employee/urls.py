@@ -9,8 +9,7 @@ router = DefaultRouter()
 router.register('users', UserViewSet)
 
 urlpatterns = [
-    path('', views.signup),
-    path('employees/', views.employees, name="employees"),
+    path('', views.employees),
     path('api/', include(router.urls)),
     path('api-token-auth//', obtain_auth_token, name='api-token-auth/'),
 ]
